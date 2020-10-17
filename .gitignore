@@ -1,0 +1,5 @@
+*.egg-info
+.idea
+.vscode
+out
+.DS_Store

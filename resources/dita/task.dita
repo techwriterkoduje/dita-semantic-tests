@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="convert_svg_to_png">
+    <title>Convert SVG to PNG</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to the install directory.</cmd>
+            </step>
+            <step>
+                <cmd>Run a command like:</cmd>
+                <info><codeblock>./converter.sh "../images" png svg</codeblock> Where the arguments
+                    are: <parml>
+                        <plentry>
+                            <pt>0</pt>
+                            <pd>path to the folder with your images</pd>
+                        </plentry>
+                        <plentry>
+                            <pt>1</pt>
+                            <pd>source format, that is the format of files you want to convert, for
+                                example png, svg, gif, etc.</pd>
+                        </plentry>
+                        <plentry>
+                            <pt>2</pt>
+                            <pd>output format, that is the format you want to convert to, for
+                                example png, svg, gif, etc.</pd>
+                        </plentry>
+                    </parml>
+                </info>
+                <stepresult>The app creates files in the <filepath outputclass="output_path"
+                        >out</filepath> folder.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

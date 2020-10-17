@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference">
+    <title>File reference</title>
+    <refbody>
+        <example>
+            <dl>
+                <dlentry>
+                    <dt><filepath>config.json</filepath></dt>
+                    <dd>Configuration file for the converter. You can define the following
+                        properties:</dd>
+                    <dd>
+                        <parml>
+                            <plentry>
+                                <pt>resize</pt>
+                                <pd>Value in % for increasing or reducing the image size</pd>
+                            </plentry>
+                            <plentry>
+                                <pt>filter</pt>
+                                <pd>Filter for changing image colors. Available values:
+                                        <option>sephia</option>, <option>grayscale</option>,
+                                        <option>supercolor</option>,</pd>
+                            </plentry>
+                            <plentry>
+                                <pt>quality</pt>
+                                <pd>Level of image quality to preserver during conversion. Available
+                                    values: <option>low</option>, <option>medium</option>,
+                                        <option>high</option>.</pd>
+                            </plentry>
+                        </parml>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt><filepath>converter.sh</filepath></dt>
+                    <dd>Command line tool for converting images between the PNG, JPG, and SVG
+                        formats.</dd>
+                </dlentry>
+            </dl>
+        </example>
+    </refbody>
+</reference>
