@@ -1,4 +1,3 @@
-#TODO: Add print messages for successful results
 import os
 import shutil
 from pathlib import Path
@@ -54,6 +53,8 @@ def main():
         print(f"Specified output path does not exist: {path_to_check}")
     else:
         print(f"Path OK: {path_to_check}")
+
+    print('Done')
 
 
 if __name__ == "__main__":
