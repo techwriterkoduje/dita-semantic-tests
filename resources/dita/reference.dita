@@ -23,7 +23,7 @@
                             </plentry>
                             <plentry>
                                 <pt>quality</pt>
-                                <pd>Level of image quality to preserver during conversion. Available
+                                <pd>Level of image quality to preserve during conversion. Available
                                     values: <option>low</option>, <option>medium</option>,
                                         <option>high</option>.</pd>
                             </plentry>

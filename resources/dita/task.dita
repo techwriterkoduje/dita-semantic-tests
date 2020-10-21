@@ -8,27 +8,27 @@
                 <cmd>Go to the install directory.</cmd>
             </step>
             <step>
-                <cmd>Run a command like:</cmd>
-                <info><codeblock>./converter.sh "../images" png svg</codeblock> Where the arguments
-                    are: <parml>
+                <cmd>Run the following command:</cmd>
+                <info><codeblock outputclass="sh">./converter.sh "../images" png svg</codeblock>
+                    Where the arguments are: <parml>
                         <plentry>
                             <pt>0</pt>
-                            <pd>path to the folder with your images</pd>
+                            <pd>Path to the folder with your images</pd>
                         </plentry>
                         <plentry>
                             <pt>1</pt>
-                            <pd>source format, that is the format of files you want to convert, for
+                            <pd>Source format, that is the format of files you want to convert, for
                                 example png, svg, gif, etc.</pd>
                         </plentry>
                         <plentry>
                             <pt>2</pt>
-                            <pd>output format, that is the format you want to convert to, for
+                            <pd>Output format, that is the format you want to convert to, for
                                 example png, svg, gif, etc.</pd>
                         </plentry>
                     </parml>
                 </info>
-                <stepresult>The app creates files in the <filepath outputclass="output_path"
-                        >out</filepath> folder.</stepresult>
+                <stepresult>The converter creates images in the <filepath outputclass="output_path"
+                        >out</filepath> directory.</stepresult>
             </step>
         </steps>
     </taskbody>
