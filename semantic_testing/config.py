@@ -1,4 +1,3 @@
-#TODO: Add print messages for successful results
 import json
 from pathlib import Path
 from xml.dom import minidom
@@ -23,10 +22,14 @@ def main():
                 full_path = app_folder / filepath_to_check
                 if not full_path.exists():
                     print(f'Path does not exist: {filepath_to_check} (referenced in {topic_path.name})')
+                else:
+                    print(f'Path OK: {filepath_to_check}')
             else:
                 all_files_and_folders = [f.name for f in app_folder.rglob("*")]
                 if filepath_to_check not in all_files_and_folders:
                     print(f'File or folder not found: {filepath_to_check} (referenced in {topic_path.name}')
+                else:
+                    print(f'Path OK: {filepath_to_check}')
             param_lists = dl_entry.getElementsByTagName("parml")
             if param_lists:
                 param_list_to_check = param_lists[0]
@@ -35,6 +38,9 @@ def main():
                 for param_name in param_names:
                     if not param_name in config_properties:
                         print(f'Parameter "{param_name}" does not exist in the config file')
+                    else:
+                        print(f'Parameter OK: {param_name}')
+
     print('Done')
 
 

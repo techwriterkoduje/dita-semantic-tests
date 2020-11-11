@@ -1,4 +1,3 @@
-#TODO: Add print messages for successful results
 from pathlib import Path
 from typing import List
 from xml.dom import minidom
@@ -43,6 +42,6 @@ for topic in topics_dir.rglob('*.dita'):
     unknown_words = [word for word in spell.unknown(all_words) if word not in ignored_words]
     if unknown_words:
         for word in unknown_words:
-            print(f'Unknown word in {topic.name}: "{word}", did you mean "{spell.correction(word)}"')
+            print(f'Unknown word in {topic.name}: "{word}". Did you mean "{spell.correction(word)}"?')
     else:
         print(f'Perfect spelling in file {topic.name}')

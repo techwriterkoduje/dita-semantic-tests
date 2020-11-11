@@ -1,4 +1,3 @@
-#TODO: Add print messages for successful results
 import os
 import shutil
 from pathlib import Path
@@ -39,21 +38,29 @@ def main():
     if path_to_check and path_to_check.exists():
         shutil.rmtree(path_to_check)
 
-    command_to_run = doc.getElementsByTagName("codeblock")[0].firstChild.nodeValue
+    codeblocks = doc.getElementsByTagName("codeblock")
 
-    os.chdir(app_folder)
-    stream = os.popen(command_to_run)
-    output = stream.readlines()
-    result = stream.close()
-    if result:
-        print(f"Problem running command {command_to_run}: {result}")
-    else:
-        check_command_output(output, command_to_run)
+    if codeblocks:
+        command_to_run = [
+            codeblock.firstChild.nodeValue
+            for codeblock in codeblocks
+            if codeblock.getAttribute("outputclass") == "sh"
+        ][0]
+        os.chdir(app_folder)
+        stream = os.popen(command_to_run)
+        output = stream.readlines()
+        result = stream.close()
+        if result:
+            print(f"Problem running command {command_to_run}: {result}")
+        else:
+            check_command_output(output, command_to_run)
 
     if not path_to_check.exists():
         print(f"Specified output path does not exist: {path_to_check}")
     else:
         print(f"Path OK: {path_to_check}")
+
+    print('Done')
 
 
 if __name__ == "__main__":
